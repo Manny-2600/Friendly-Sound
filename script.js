@@ -3,16 +3,25 @@ let Trackdata= {};
 
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
+    
+    console.log(searchInput)
+    let query = ''
+
+    searchInput.addEventListener('change', (e)=>{
+        query = (e.target.value);
+        console.log(query)
+    })
+
 
     searchButton.addEventListener('click', function() {
         console.log("performing track Search");
 
-        let searchText = searchInput.ariaValueMax;
+        let searchText = query;
         console.log("Search text: " +searchText);
 
         let searchURL  = `https://api.spotify.com/v1/search?q=${searchText}&type=track&limit=1`;
         fetch(searchURL, {
-            headers: {Authorization: ' Bearer BQBNtjqnp0vrEU_G8262lrd7LHgBtNYyHEJqSU3pJk8ZSedDU7an72jwFet4-Dj6pIxW-up2j8rhjOoUSoTEOTjlswG0U9j7gEG8ekI7lwSMkJCmoHQ'}
+            headers: {Authorization:  "Bearer BQCjeMybZ08yBANQCwlqdbO3i5s7irxEjgj90GcyRXU577JHgdzCvWrtsZ53fz9bHIm_PVqS25M0ddYQ-U9mhOtzvIwl8vFbR2029zORO0HJsuWQiI8"}
         })
         .then(resp => resp.json())
         .then(r => {
@@ -50,6 +59,10 @@ let Trackdata= {};
 
 
 });
+
+
+
+
 
 
 
