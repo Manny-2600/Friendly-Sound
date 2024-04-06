@@ -21,7 +21,7 @@ let Trackdata= {};
 
         let searchURL  = `https://api.spotify.com/v1/search?q=${searchText}&type=track&limit=1`;
         fetch(searchURL, {
-            headers: {Authorization:  "Bearer BQCjeMybZ08yBANQCwlqdbO3i5s7irxEjgj90GcyRXU577JHgdzCvWrtsZ53fz9bHIm_PVqS25M0ddYQ-U9mhOtzvIwl8vFbR2029zORO0HJsuWQiI8"}
+            headers: {Authorization:  "Bearer BQCW4ydKIv6Dc8wYO2dwGBi9-bZpnhMASlAv8xTPc8Wu_Nx8WWTlrVyxB-d0UBdNk5POjhFW8ID9-HP_MPobSEjRXpBFr0GWehXSnhDS4TNTmpUvLsM"}
         })
         .then(resp => resp.json())
         .then(r => {
